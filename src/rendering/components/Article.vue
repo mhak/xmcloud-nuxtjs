@@ -1,5 +1,5 @@
 <template>
     <main>
-        Article from nuxt
+        Article from nuxt!
     </main>
 </template>

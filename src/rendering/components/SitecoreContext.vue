@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const store = useSitecore();
-const counter = useCounter();
 </script>
 
 <template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-//import { Placeholder, LayoutServiceData } from '@sitecore-jss/sitecore-jss-vue';
-import Placeholder from '../sitecore-jss-nuxtjs/Placeholder.vue';
+import { Placeholder } from '@sitecore-jss/sitecore-jss-vue';
 
 const props = defineProps({
   layoutData: { type: Object, required: true }
@@ -17,13 +16,13 @@ console.log('[Layout.vue] route', route);
   Layout
   <!--root placeholder for the app, which we add components to using route data -->
   <header>
-      <div id="header"><placeholder name="headless-header" :rendering="route" /></div>
+      <div id="header"><Placeholder name="headless-header" :rendering="route" /></div>
   </header>
   <main>
-      <div id="content"><placeholder name="headless-main" :rendering="route" /></div>
+      <div id="content"><Placeholder name="headless-main" :rendering="route" /></div>
   </main>
   <footer>
-      <div id="footer"><placeholder name="headless-footer" :rendering="route" /></div>
+      <div id="footer"><Placeholder name="headless-footer" :rendering="route" /></div>
   </footer>
   <SitecoreContext />
 </template>

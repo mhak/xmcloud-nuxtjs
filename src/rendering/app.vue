@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { SitecoreJssPlaceholderPlugin } from '@sitecore-jss/sitecore-jss-vue';
+import componentFactory from './temp/componentFactory';
 import { layoutServiceFactory } from './lib/layout-service-factory';
+const app = useNuxtApp().vueApp;
 // const route = useRoute();
 // const store = useSitecore();
 
@@ -18,6 +21,8 @@ import { layoutServiceFactory } from './lib/layout-service-factory';
 // const { data }  = await useAsyncData('layoutData', () => layoutServiceInstance.fetchLayoutData(sitecoreRoutePath, "en"));
 // console.log('layoutData', data.value);
 // store.setSitecoreData(data.value);
+
+app.use(SitecoreJssPlaceholderPlugin, { componentFactory });
 </script>
 
 <template>
