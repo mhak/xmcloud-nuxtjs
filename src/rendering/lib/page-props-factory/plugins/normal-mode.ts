@@ -27,7 +27,7 @@ class NormalModePlugin implements Plugin {
     */
 
     // Fetch layout data, passing on req/res for SSR
-    const layoutService = this.getLayoutService('sxastarter');
+    const layoutService = this.getLayoutService('sxastarter'); // todo: remove hardcode
     console.log('[normal-mode.ts] layoutservice',layoutService);
     console.log('[normal-mode.ts] props',props);
     // props.layoutData = await layoutService.fetchLayoutData(

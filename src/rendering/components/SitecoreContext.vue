@@ -4,6 +4,7 @@ const counter = useCounter();
 </script>
 
 <template>
+  <em>sitecore context</em>
   <pre>{{
       JSON.stringify(store.sitecoreContext, null, 2)
     }}</pre>

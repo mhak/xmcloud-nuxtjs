@@ -1,4 +1,4 @@
-# XM Cloud Starter Kit (Next JS)
+# XM Cloud Starter Kit (Nuxt JS)
 
 ## QUICK START
 
@@ -21,7 +21,6 @@
 *** 
 
 ## About this Solution
-This solution is designed to help developers learn and get started quickly
-with XMCLoud + SXA.
+This is a Proof of Concept of utilizing NuxtJS on XM Cloud
 
 

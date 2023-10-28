@@ -4,9 +4,10 @@ const props = defineProps({
   name: { type: String, required: true},
 })
 console.log("[Placeholder.vue] placeholders", props.rendering?.placeholders);
-const components = props.rendering?.placeholders[props.name].map((c) => {
-    console.log(`resolveComponent(${c.componentName})`);
-    return resolveComponent(c.componentName);
+const components = props.rendering?.placeholders[props.name].map((c:any) => {
+    console.log(`resolveComponent('${c.componentName}')`);
+    //todo: resolveComponent only works with string literal
+    return resolveComponent('Article');
 });
 // console.log("[Placeholder.vue] components", components);
 // var test = "Article";
