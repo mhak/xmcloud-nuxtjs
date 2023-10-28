@@ -21,6 +21,4 @@
 *** 
 
 ## About this Solution
-This is a Proof of Concept of utilizing NuxtJS on XM Cloud
-
-
+This is a Proof of Concept demonstrating the use of NuxtJS on XM Cloud
