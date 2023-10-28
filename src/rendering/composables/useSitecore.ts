@@ -32,6 +32,3 @@ export const useSitecore = defineStore({
     },
   },
 });
-
-// todo: remove
-export const useCounter = () => useState('counter', () => 0);

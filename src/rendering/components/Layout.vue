@@ -7,13 +7,14 @@ const props = defineProps({
 
 const { route } = props.layoutData.sitecore;
 console.log('[Layout.vue] route', route);
+
+const title = route?.fields?.Title?.value || '';
 </script>
 
 <template>
   <Head>
-      <title>Page title</title>
+      <title>{{ title }}</title>
   </Head>
-  Layout
   <!--root placeholder for the app, which we add components to using route data -->
   <header>
       <div id="header"><Placeholder name="headless-header" :rendering="route" /></div>

@@ -47,6 +47,7 @@ export class SitecorePagePropsFactory {
         return newProps;
       }, Promise.resolve({} as SitecorePageProps));
 
+    console.log('extended', extendedProps);
     return extendedProps;
   }
 }

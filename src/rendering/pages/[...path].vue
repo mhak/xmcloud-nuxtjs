@@ -1,4 +1,5 @@
 <script setup>
+    // import { SitecorePageProps } from '../lib/page-props';
     import { sitecorePagePropsFactory } from '../lib/page-props-factory';
     const route = useRoute();
     const store = useSitecore();
@@ -15,6 +16,7 @@
     console.log('[[...path].vue]sitecoreRoutePath',sitecoreRoutePath);
 
     const { data } = await useAsyncData('layoutData', () => sitecorePagePropsFactory.create(sitecoreRoutePath));
+    const notFound = data.value.notFound;
     const layoutData = data.value.layoutData;
     console.log('[[...path].vue] layoutData', layoutData);
     
@@ -31,5 +33,8 @@
 </script>
 
 <template>
-    <Layout :layoutData="layoutData"/>
+    <NotFound
+        v-if="notFound"
+    />
+    <Layout v-else :layoutData="layoutData"/>
 </template>

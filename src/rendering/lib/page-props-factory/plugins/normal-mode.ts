@@ -58,7 +58,7 @@ class NormalModePlugin implements Plugin {
 
     // Initialize links to be inserted on the page
    // props.headLinks = [];
-
+    console.log('normal mode, not found', props.notFound);
     return props;
   }
 
