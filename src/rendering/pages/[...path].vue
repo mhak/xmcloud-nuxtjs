@@ -1,5 +1,6 @@
 <script setup>
-    // import { SitecorePageProps } from '../lib/page-props';
+    
+    //import { SitecorePageProps } from '../lib/page-props';
     import { sitecorePagePropsFactory } from '../lib/page-props-factory';
     const route = useRoute();
     const store = useSitecore();
@@ -13,11 +14,10 @@
         sitecoreRoutePath = `/${sitecoreRoutePath}`;
     }
 
-    console.log('[[...path].vue]sitecoreRoutePath',sitecoreRoutePath);
-
     const { data } = await useAsyncData('layoutData', () => sitecorePagePropsFactory.create(sitecoreRoutePath));
-    const notFound = data.value.notFound;
-    const layoutData = data.value.layoutData;
+    const pageProps = data.value;
+    const notFound = pageProps?.notFound;
+    const layoutData = pageProps?.layoutData;
     console.log('[[...path].vue] layoutData', layoutData);
     
     store.setSitecoreData(layoutData);

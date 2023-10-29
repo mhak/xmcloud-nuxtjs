@@ -1,4 +1,13 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "lib/*": ["lib/*"],
+      "temp/*": ["temp/*"],
+      "graphql-types": ["node_modules/@types/graphql-let/__generated__/__types__"]
+    },
+  }
 }

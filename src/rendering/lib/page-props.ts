@@ -1,20 +1,19 @@
 import {
-  // DictionaryPhrases,
-  // ComponentPropsCollection,
+  DictionaryPhrases,
   LayoutServiceData,
-  // SiteInfo,
-  // HTMLLink,
-} from '@sitecore-jss/sitecore-jss-vue';
+  SiteInfo,
+  HTMLLink,
+} from '../packages/sitecore-jss-nuxtjs/src';
 
 /**
  * Sitecore page props
  */
 export type SitecorePageProps = {
-  // site: SiteInfo;
+  site: SiteInfo;
   locale: string;
-  // dictionary: DictionaryPhrases;
-  // componentProps: ComponentPropsCollection;
+  dictionary: DictionaryPhrases;
+  //componentProps: ComponentPropsCollection;
   notFound: boolean;
   layoutData: LayoutServiceData;
-  // headLinks: HTMLLink[];
+  headLinks: HTMLLink[];
 };

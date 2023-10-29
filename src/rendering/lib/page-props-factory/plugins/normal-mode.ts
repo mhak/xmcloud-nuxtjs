@@ -1,7 +1,7 @@
 import { layoutServiceFactory } from '../../../lib/layout-service-factory';
-import { SitecorePageProps } from '../../../lib/page-props';
+import { SitecorePageProps } from 'lib/page-props';
 import { DictionaryService, LayoutService } from '@sitecore-jss/sitecore-jss-vue';
-//import { pathExtractor } from '../../lib/extract-path';
+import { pathExtractor } from 'lib/extract-path';
 import { Plugin } from '..';
 
 class NormalModePlugin implements Plugin {
@@ -16,20 +16,20 @@ class NormalModePlugin implements Plugin {
   }
   //async exec(props: SitecorePageProps, context: GetServerSidePropsContext | GetStaticPropsContext) {
   async exec(props: SitecorePageProps, path: string) {
-    /*if (context.preview) return props;
+    // if (context.preview) return props;
 
-    // Get normalized Sitecore item path
+    //Get normalized Sitecore item path
     //const path = pathExtractor.extract(context.params);
-    const path = context.params;
 
     // Use context locale if Next.js i18n is configured, otherwise use default site language
-    props.locale = context.locale ?? props.site.language;
-    */
+    // props.locale = context.locale ?? props.site.language;
 
     // Fetch layout data, passing on req/res for SSR
-    const layoutService = this.getLayoutService('sxastarter'); // todo: remove hardcode
-    console.log('[normal-mode.ts] layoutservice',layoutService);
     console.log('[normal-mode.ts] props',props);
+    //const layoutService = this.getLayoutService(props.site.name);
+    const layoutService = this.getLayoutService('sxastarter'); // todo: remove hardcode
+    console.log('[normal-mode.ts] layoutservice', layoutService);
+    
     // props.layoutData = await layoutService.fetchLayoutData(
     //   path,
     //   props.locale,

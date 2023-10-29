@@ -34,20 +34,16 @@ export class SitecorePagePropsFactory {
    * @see SitecorePageProps
    */
   public async create(
-    context: any
+    route: any
     //context: GetServerSidePropsContext | GetStaticPropsContext
   ): Promise<SitecorePageProps> {
     const extendedProps = await (Object.values(plugins) as Plugin[])
       .sort((p1, p2) => p1.order - p2.order)
       .reduce(async (result, plugin) => {
         const props = await result;
-        //const newProps = await plugin.exec(props, context);
-        console.log('creating');
-        const newProps = await plugin.exec(props, context);
+        const newProps = await plugin.exec(props, route);
         return newProps;
       }, Promise.resolve({} as SitecorePageProps));
-
-    console.log('extended', extendedProps);
     return extendedProps;
   }
 }

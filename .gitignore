@@ -41,8 +41,6 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
 .env
-#Nuget packages folder
-packages/
 
 # temporary workaround
 /docker/data/cm/*
@@ -56,7 +54,7 @@ packages/
 /docker/deploy/platform/*
 !/docker/deploy/platform/.gitkeep
 /docker/traefik/certs/*.pem
-/src/rendering/node_modules
+/**/node_modules
 /src/rendering/coverage
 /src/rendering/.next*/
 /src/rendering/out/

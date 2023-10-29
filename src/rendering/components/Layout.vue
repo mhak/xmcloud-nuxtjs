@@ -5,7 +5,7 @@ const props = defineProps({
   layoutData: { type: Object, required: true }
 })
 
-const { route } = props.layoutData.sitecore;
+const { route } = props.layoutData?.sitecore;
 console.log('[Layout.vue] route', route);
 
 const title = route?.fields?.Title?.value || '';
