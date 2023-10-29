@@ -14,7 +14,6 @@ class NormalModePlugin implements Plugin {
     // this.dictionaryServices = new Map<string, DictionaryService>();
     this.layoutServices = new Map<string, LayoutService>();
   }
-  //async exec(props: SitecorePageProps, context: GetServerSidePropsContext | GetStaticPropsContext) {
   async exec(props: SitecorePageProps, path: string) {
     // if (context.preview) return props;
 
@@ -25,9 +24,8 @@ class NormalModePlugin implements Plugin {
     // props.locale = context.locale ?? props.site.language;
 
     // Fetch layout data, passing on req/res for SSR
-    console.log('[normal-mode.ts] props',props);
-    //const layoutService = this.getLayoutService(props.site.name);
-    const layoutService = this.getLayoutService('sxastarter'); // todo: remove hardcode
+    console.log('[normal-mode.ts] props 1', props);
+    const layoutService = this.getLayoutService(props.site.name);
     console.log('[normal-mode.ts] layoutservice', layoutService);
     
     // props.layoutData = await layoutService.fetchLayoutData(
@@ -43,7 +41,7 @@ class NormalModePlugin implements Plugin {
       //props.locale,
     );
 
-    console.log('[normal-mode.ts] props', props);
+    console.log('[normal-mode.ts] props 2', props);
     if (!props.layoutData.sitecore.route) {
       // A missing route value signifies an invalid path, so set notFound.
       // Our page routes will return this in getStatic/ServerSideProps,
@@ -58,7 +56,6 @@ class NormalModePlugin implements Plugin {
 
     // Initialize links to be inserted on the page
    // props.headLinks = [];
-    console.log('normal mode, not found', props.notFound);
     return props;
   }
 

@@ -22,3 +22,17 @@
 
 ## About this Solution
 This is a Proof of Concept demonstrating the use of NuxtJS on XM Cloud
+
+1. ~~site resolver~~
+1. ~~layout service~~
+    1. graphql vs rest
+1. components factory
+1. configuration generation
+1. ~~placeholder~~
+1. fields
+
+
+editing api
+dictionary
+translations (i18n)
+sitemap
