@@ -4,7 +4,4 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
   ],
-  experimental: {
-    typedPages: true
-  }
 })

@@ -1,13 +1,25 @@
 <script setup lang="ts">
-const store = useSitecore();
+const { $nuxtJss } = useNuxtApp();
 </script>
 
 <template>
-  <em>sitecore context</em>
-  <pre>{{
-      JSON.stringify(store.sitecoreContext, null, 2)
-    }}</pre>
-    <pre>{{
-      JSON.stringify(store.routeData, null, 2)
-    }}</pre>
+  <!-- For debugging -->
+  <section class="sitecore-context">
+    <hr/>
+    <strong>Sitecore Context:</strong>
+      <pre>{{
+        JSON.stringify($nuxtJss.sitecoreContext(), null, 2)
+      }}</pre>
+      <strong>Route data:</strong>
+      <pre>{{
+        JSON.stringify($nuxtJss.routeData(), null, 2)
+      }}</pre>
+    </section>
 </template>
+
+<style scoped>
+.sitecore-context {
+  font-size:.8em;
+  color: gray;
+}
+</style>

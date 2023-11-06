@@ -1,0 +1,5 @@
+<template>
+    <section>
+        <h2>Test</h2>
+    </section>
+</template>

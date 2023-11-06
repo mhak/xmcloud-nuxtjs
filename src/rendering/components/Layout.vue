@@ -1,13 +1,8 @@
 <script setup lang="ts">
 import { Placeholder } from '@sitecore-jss/sitecore-jss-vue';
-
-const props = defineProps({
-  layoutData: { type: Object, required: true }
-})
-
-const { route } = props.layoutData?.sitecore;
-console.log('[Layout.vue] route', route);
-
+const { $nuxtJss } = useNuxtApp();
+const route  = $nuxtJss.routeData();
+console.log('layout routeData', route);
 const title = route?.fields?.Title?.value || '';
 </script>
 

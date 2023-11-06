@@ -15,33 +15,17 @@ class NormalModePlugin implements Plugin {
     this.layoutServices = new Map<string, LayoutService>();
   }
   async exec(props: SitecorePageProps, path: string) {
-    // if (context.preview) return props;
-
-    //Get normalized Sitecore item path
-    //const path = pathExtractor.extract(context.params);
-
     // Use context locale if Next.js i18n is configured, otherwise use default site language
-    // props.locale = context.locale ?? props.site.language;
+    props.locale = props?.site?.language || 'en';
 
     // Fetch layout data, passing on req/res for SSR
-    console.log('[normal-mode.ts] props 1', props);
     const layoutService = this.getLayoutService(props.site.name);
-    console.log('[normal-mode.ts] layoutservice', layoutService);
     
-    // props.layoutData = await layoutService.fetchLayoutData(
-    //   path,
-    //   props.locale,
-    //   // eslint-disable-next-line prettier/prettier
-    //   isServerSidePropsContext(context) ? (context as GetServerSidePropsContext).req : undefined,
-    //   isServerSidePropsContext(context) ? (context as GetServerSidePropsContext).res : undefined
-    // );
     props.layoutData = await layoutService.fetchLayoutData(
       path,
-      'en',
-      //props.locale,
+      props.locale,
     );
 
-    console.log('[normal-mode.ts] props 2', props);
     if (!props.layoutData.sitecore.route) {
       // A missing route value signifies an invalid path, so set notFound.
       // Our page routes will return this in getStatic/ServerSideProps,
