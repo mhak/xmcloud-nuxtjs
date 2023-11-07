@@ -4,9 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "lib/*": ["lib/*"],
-      "temp/*": ["temp/*"],
+      "@/*": ["src/*"],
       "graphql-types": ["node_modules/@types/graphql-let/__generated__/__types__"]
     },
   }

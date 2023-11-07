@@ -1,6 +1,6 @@
 // import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
-import { SitecorePageProps } from '../page-props';
-import * as plugins from '../../temp/page-props-factory-plugins';
+import { SitecorePageProps } from '@/lib/page-props';
+import * as plugins from '@/temp/page-props-factory-plugins';
 
 /**
  * Determines whether context is GetServerSidePropsContext (SSR) or GetStaticPropsContext (SSG)

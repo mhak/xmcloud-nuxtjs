@@ -2,7 +2,7 @@ import {
   GraphQLLayoutService,
   LayoutService
 } from '@sitecore-jss/sitecore-jss-vue';
-import config from '../temp/config';
+import config from '@/temp/config';
 
 /**
  * Factory responsible for creating a LayoutService instance

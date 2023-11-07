@@ -1,7 +1,7 @@
-import { layoutServiceFactory } from '../../../lib/layout-service-factory';
-import { SitecorePageProps } from 'lib/page-props';
+import { layoutServiceFactory } from '@/lib/layout-service-factory';
+import { SitecorePageProps } from '@/lib/page-props';
 import { DictionaryService, LayoutService } from '@sitecore-jss/sitecore-jss-vue';
-import { pathExtractor } from 'lib/extract-path';
+import { pathExtractor } from '@/lib/extract-path';
 import { Plugin } from '..';
 
 class NormalModePlugin implements Plugin {

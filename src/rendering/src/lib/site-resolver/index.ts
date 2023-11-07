@@ -1,5 +1,5 @@
 import { SiteInfo, SiteResolver } from '@sitecore-jss/sitecore-jss/site';
-import * as plugins from '../../temp/site-resolver-plugins';
+import * as plugins from '@/temp/site-resolver-plugins';
 
 /*
   The site resolver stores site information and is used in the app

@@ -1,8 +1,8 @@
-import { SitecorePageProps } from 'lib/page-props';
+import { SitecorePageProps } from '@/lib/page-props';
 import { getSiteRewriteData } from '@sitecore-jss/sitecore-jss/site';
 import { Plugin } from '..';
-import { siteResolver } from '../../site-resolver';
-import config from '../../../temp/config';
+import { siteResolver } from '@/lib/site-resolver';
+import config from '@/temp/config';
 
 class SitePlugin implements Plugin {
   order = 0;
