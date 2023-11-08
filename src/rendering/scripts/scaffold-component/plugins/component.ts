@@ -13,7 +13,7 @@ class ComponentPlugin implements ScaffoldComponentPlugin {
 
   exec(config: ScaffoldComponentPluginConfig) {
     const { componentName, componentPath } = config;
-    const filename = `${componentName}.tsx`;
+    const filename = `${componentName}.vue`;
     const outputFilePath = path.join(this.componentRootPath, componentPath, filename);
     const template = generateComponentSrc(componentName);
 

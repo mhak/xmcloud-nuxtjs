@@ -37,9 +37,10 @@ const pluginDefinitions: PluginDefinition[] = [
   //   moduleType: ModuleType.ESM,
   // },
   {
-    distPath: 'temp/page-props-factory-plugins.ts',
-    rootPath: 'lib/page-props-factory/plugins',
+    distPath: 'src/temp/page-props-factory-plugins.ts',
+    rootPath: 'src/lib/page-props-factory/plugins',
     moduleType: ModuleType.ESM,
+    relative: true
   },
   // {
   //   distPath: 'src/temp/next-config-plugins.js',
@@ -47,16 +48,18 @@ const pluginDefinitions: PluginDefinition[] = [
   //   moduleType: ModuleType.CJS,
   //   relative: true,
   // },
-  // {
-  //   distPath: 'src/temp/extract-path-plugins.ts',
-  //   rootPath: 'src/lib/extract-path/plugins',
-  //   moduleType: ModuleType.ESM,
-  // },
-  // {
-  //   distPath: 'src/temp/site-resolver-plugins.ts',
-  //   rootPath: 'src/lib/site-resolver/plugins',
-  //   moduleType: ModuleType.ESM,
-  // },
+  {
+    distPath: 'src/temp/extract-path-plugins.ts',
+    rootPath: 'src/lib/extract-path/plugins',
+    moduleType: ModuleType.ESM,
+    relative: true
+  },
+  {
+    distPath: 'src/temp/site-resolver-plugins.ts',
+    rootPath: 'src/lib/site-resolver/plugins',
+    moduleType: ModuleType.ESM,
+    relative: true
+  },
 ];
 
 pluginDefinitions.forEach((definition) => {

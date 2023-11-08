@@ -25,21 +25,28 @@ This is a Proof of Concept demonstrating the use of NuxtJS on XM Cloud
 
 https://github.com/Sitecore/jss
 
-1. ~~site resolver~~
-1. ~~layout service~~
-    1. graphql vs rest
+The Rendering SDK / Starter Kit contains many functionality to get you started developing in Nuxt.js. 
+
+### :white_check_mark: Site resolver
+Filepath: `rendering/src/lib/site-resolver`
+
+### Layout service
+Filepath: `rendering/src/lib/page-props-factory`
+1. :white_check_mark: Normal Mode
+1. todo: edit mode
+1. todo: GraphQL vs Reset
+
+### Rendering
+Filepath: `rendering/src/plugins`
+1. :white_check_mark: Sitecore Jss Store - Sitecore Context / Route data
+1. :white_check_mark: Sitecore Jss Placeholder - reads from component factory to render components dynamically
+
+### Misc notes
+
 1. components factory
 1. configuration generation
 1. Bootstrap.ts
     1. Generate plugins
     1. Generate config
     1. Generate component builder
-1. placeholder
 1. rendering fields
-
-
-
-editing api
-dictionary
-translations (i18n)
-sitemap
