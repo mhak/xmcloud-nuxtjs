@@ -1,7 +1,10 @@
 import {
   GraphQLLayoutService,
+  RestLayoutService,
   LayoutService
-} from '@sitecore-jss/sitecore-jss-vue';
+} from '@sitecore-jss/sitecore-jss/layout';
+import { constants } from '@sitecore-jss/sitecore-jss';
+
 import config from '@/temp/config';
 
 /**
@@ -13,23 +16,18 @@ export class LayoutServiceFactory {
    * @returns {LayoutService} service instance
    */
   create(siteName: string): LayoutService {
-    return new GraphQLLayoutService({
-      endpoint: config.graphQLEndpoint,
-        apiKey: config.sitecoreApiKey,
-        siteName,
-    });
-    // return process.env.FETCH_WITH === constants.FETCH_WITH.GRAPHQL
-    //   ? new GraphQLLayoutService({
-    //       endpoint: config.graphQLEndpoint,
-    //       apiKey: config.sitecoreApiKey,
-    //       siteName,
-    //     })
-    //   : new RestLayoutService({
-    //       apiHost: config.sitecoreApiHost,
-    //       apiKey: config.sitecoreApiKey,
-    //       siteName,
-    //       configurationName: 'default',
-    //     });
+    return process.env.FETCH_WITH === constants.FETCH_WITH.GRAPHQL
+      ? new GraphQLLayoutService({
+          endpoint: config.graphQLEndpoint,
+          apiKey: config.sitecoreApiKey,
+          siteName,
+        })
+      : new RestLayoutService({
+          apiHost: config.sitecoreApiHost,
+          apiKey: config.sitecoreApiKey,
+          siteName,
+          configurationName: 'default',
+        });
   }
 }
 

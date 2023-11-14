@@ -34,7 +34,7 @@ Filepath: `rendering/src/lib/site-resolver`
 Filepath: `rendering/src/lib/page-props-factory`
 1. :white_check_mark: Normal Mode
 1. todo: edit mode
-1. todo: GraphQL vs Reset
+1. :white_check_mark: GraphQL vs Reset
 
 ### Rendering
 Filepath: `rendering/src/plugins`
