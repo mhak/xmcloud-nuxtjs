@@ -1,4 +1,4 @@
-import { normalizeSiteRewrite } from 'packages/sitecore-jss-nuxtjs/src';
+import { normalizeSiteRewrite } from '@/packages/sitecore-jss-nuxtjs/src';
 import { Plugin } from '..';
 
 class MultisitePlugin implements Plugin {

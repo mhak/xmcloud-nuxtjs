@@ -1,6 +1,8 @@
 import {
   GraphQLDictionaryService
-} from '@sitecore-jss/sitecore-jss-vue';
+} from '@sitecore-jss/sitecore-jss/i18n';
+//from '@sitecore-jss/sitecore-jss-vue';
+
 import config from '@/temp/config';
 
 export class DictionaryServiceFactory {

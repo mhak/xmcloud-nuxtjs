@@ -1,15 +1,5 @@
 export {
-    constants,
-    // generic data access
-    HttpDataFetcher,
-    HttpResponse,
-    AxiosResponse,
-    AxiosDataFetcher,
-    AxiosDataFetcherConfig,
-    NativeDataFetcher,
-    NativeDataFetcherConfig,
-    HTMLLink,
-    enableDebug,
+    constants
   } from '@sitecore-jss/sitecore-jss';
   
   export {
@@ -85,7 +75,7 @@ export {
     
 //   export { Link, LinkProps } from './components/Link';
 //   export { RichText, RichTextProps } from './components/RichText';
-//   export { Placeholder } from './components/Placeholder';
+  export { Placeholder } from './components/Placeholder';
 //   export { EditingComponentPlaceholder } from './components/EditingComponentPlaceholder';
 //   export { NextImage } from './components/NextImage';
   

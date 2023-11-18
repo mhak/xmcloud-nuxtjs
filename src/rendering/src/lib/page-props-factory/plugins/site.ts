@@ -13,7 +13,6 @@ class SitePlugin implements Plugin {
 
     // Resolve site by name
     props.site = siteResolver.getByName(siteData.siteName);
-
     return props;
   }
 }

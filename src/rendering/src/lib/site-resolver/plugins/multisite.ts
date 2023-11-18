@@ -1,4 +1,4 @@
-import { SiteInfo } from 'packages/sitecore-jss-nuxtjs/src';
+import { SiteInfo } from '@/packages/sitecore-jss-nuxtjs/src';
 import config from '@/temp/config';
 import { SiteResolverPlugin } from '..';
 

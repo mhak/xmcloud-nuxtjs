@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   srcDir: 'src/',
   devtools: { enabled: true },
-  alias: {
-    "@/": "src/",
-  }
+  // alias: {
+  //   "@/": "src/",
+  // }
 })

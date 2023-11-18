@@ -3,7 +3,7 @@ import {
   LayoutServiceData,
   SiteInfo,
   HTMLLink,
-} from 'packages/sitecore-jss-nuxtjs/src';
+} from '@/packages/sitecore-jss-nuxtjs/src';
 
 /**
  * Sitecore page props
