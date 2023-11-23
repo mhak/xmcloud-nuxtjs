@@ -12,7 +12,8 @@ const title = route?.fields?.Title?.value || '';
   </Head>
   <!--root placeholder for the app, which we add components to using route data -->
   <header>
-      <div id="header"><Placeholder name="headless-header" :rendering="route" :fields="route.fields" /></div>
+    <Navigation />
+    <div id="header"><Placeholder name="headless-header" :rendering="route" :fields="route.fields" /></div>
   </header>
   <main>
       <div id="content"><Placeholder name="headless-main" :rendering="route" :fields="route.fields"/></div>

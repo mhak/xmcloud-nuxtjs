@@ -30,5 +30,5 @@
     <NotFound
         v-if="notFound"
     />
-    <Layout />
+    <Layout v-else />
 </template>
