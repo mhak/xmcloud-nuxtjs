@@ -13,7 +13,7 @@ import './generate-plugins';
 /*
   CONFIG GENERATION
 */
-//import './generate-config';
+import './generate-config';
 
 /*
   COMPONENT BUILDER GENERATION
