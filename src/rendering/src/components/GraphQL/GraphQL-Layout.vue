@@ -42,7 +42,7 @@ export default {
   },
   computed: {
     disconnectedMode() {
-      return this.$jss.sitecoreContext().itemId === 'available-in-connected-mode';
+      return false;//this.$jss.sitecoreContext().itemId === 'available-in-connected-mode';
     },
   },
 };

@@ -16,7 +16,9 @@
       <br />
       name: {{ datasource.name }}
       <br />
-      sample1: {{ datasource.sample1.value }}
+      text: {{  datasource.text.jsonValue.value }} <br/>
+      text (editable): <sc-text :field="datasource.text.jsonValue" />
+      <!--sample1: {{ datasource.sample1.value }}
       <br />
       sample1 (editable): <sc-text :field="datasource.sample1.jsonValue" />
       <br />
@@ -28,22 +30,24 @@
         <li>editable: <sc-link :field="datasource.sample2.jsonValue" /></li>
         <li>field type: {{ datasource.sample2.definition.type }}</li>
         <li>field is shared?: {{ datasource.sample2.definition.shared.toString() }}</li>
-      </ul>
+      </ul> -->
     </div>
 
     <div v-if="contextItem">
       <h4>Route Item (via Integrated GraphQL)</h4>
       id: {{ contextItem.id }}
       <br />
-      page title: {{ contextItem.pageTitle.value }}
+      title: {{ contextItem.title.jsonValue.value }}
       <br />
-      children:
+      content: {{ contextItem.content.jsonValue.value }}
+      <br />
+      <!-- children:
       <ul>
         <li v-for="child in contextItem.children.results" :key="child.id">
           <router-link :to="child.url.path">{{ child.pageTitle.value }}</router-link
           >&nbsp; (editable title too! <sc-text :field="child.pageTitle.jss" />)
         </li>
-      </ul>
+      </ul>-->
     </div>
   </div>
 </template>

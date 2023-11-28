@@ -12,14 +12,14 @@ const title = route?.fields?.Title?.value || '';
   </Head>
   <!--root placeholder for the app, which we add components to using route data -->
   <header>
-    <Navigation />
-    <div id="header"><Placeholder name="headless-header" :rendering="route" :fields="route.fields" /></div>
+    <!-- <Navigation /> -->
+    <div id="header"><Placeholder name="headless-header" :rendering="route" /></div>
   </header>
   <main>
-      <div id="content"><Placeholder name="headless-main" :rendering="route" :fields="route.fields"/></div>
+      <div id="content"><Placeholder name="headless-main" :rendering="route"/></div>
   </main>
   <footer>
-      <div id="footer"><Placeholder name="headless-footer" :rendering="route" :fields="route.fields" /></div>
+      <div id="footer"><Placeholder name="headless-footer" :rendering="route" /></div>
   </footer>
   <SitecoreContext />
 </template>

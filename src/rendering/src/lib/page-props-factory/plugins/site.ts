@@ -9,8 +9,13 @@ class SitePlugin implements Plugin {
 
   async exec(props: SitecorePageProps, path: string) {
     // Get site name (from path)
+    // {
+    //   siteName: defaultSiteName,
+    // }
+    // prefix: _site_
     const siteData = getSiteRewriteData(path, config.jssAppName);
 
+    console.log('siteData', siteData);
     // Resolve site by name
     props.site = siteResolver.getByName(siteData.siteName);
     return props;

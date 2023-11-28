@@ -11,7 +11,6 @@ class MultisitePlugin implements ConfigPlugin {
   order = 11;
 
   async exec(config: JssConfig) {
-    console.log('multisite');
     let sites: SiteInfo[] = [];
 
     const endpoint = config.graphQLEndpoint;

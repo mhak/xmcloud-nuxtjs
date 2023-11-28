@@ -15,12 +15,15 @@ class NormalModePlugin implements Plugin {
     this.layoutServices = new Map<string, LayoutService>();
   }
   async exec(props: SitecorePageProps, path: string) {
-    // Use context locale if Next.js i18n is configured, otherwise use default site language
+    
+    // use default site language
+    // get language from path / i18n
+    console.log('props?.site?.language', props?.site?.language);
     props.locale = props?.site?.language || 'en';
 
     // Fetch layout data, passing on req/res for SSR
     const layoutService = this.getLayoutService(props.site.name);
-    
+
     props.layoutData = await layoutService.fetchLayoutData(
       path,
       props.locale,

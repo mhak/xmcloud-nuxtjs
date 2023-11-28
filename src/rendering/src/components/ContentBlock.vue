@@ -4,7 +4,6 @@ import { Text, RichText, Field } from '@sitecore-jss/sitecore-jss-vue';
 export interface ContentBlockProps {
   Title?: Field<string>,
   Content?: Field<string>,
-  Text?: Field<string>
 }
 
 defineProps<{
