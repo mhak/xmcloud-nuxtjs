@@ -43,10 +43,12 @@ Filepath: `rendering/src/plugins`
 
 ### Misc notes
 
-1. components factory
-1. configuration generation
 1. Bootstrap.ts
     1. Generate plugins
-    1. Generate config
-    1. Generate component builder
-1. rendering fields
+    1. :white_check_mark: Generate config
+    1. Generate component builder / components factory
+1. :white_check_mark: Rendering fields
+1. Dictionary
+1. Language resolver
+1. graphql-let
+1. edit frames
